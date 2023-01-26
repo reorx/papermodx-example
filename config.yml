@@ -1,0 +1,116 @@
+title: PaperModX Example Site
+baseURL: "https://reorx.github.io/papermodx-example/"
+theme: PaperModX
+
+enableRobotsTXT: true
+enableEmoji: true
+
+params:
+  description: "PaperModX Example Site description"
+  author: Reorx
+  images:
+    - cover.png
+  favicon: favicon.ico
+  #logo:
+  #  icon: images/forge-v2-compat.svg
+  DateFormat: "2006-01-02"
+  useCustomAnalytics: true
+  mainSections:
+    - posts
+    - notes
+
+  # theme params
+  DisableLanguageSwitch: true
+  TocOpen: true
+  TocSide: right
+  EnableInstantClick: false
+  EnableImageZoom: true
+  ShowShareButtons: true
+  ShareButtons:
+    - twitter
+    - telegram
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  Email: hello@example.com
+
+  #commentSystems:
+  #  disqus:
+  #    shortname: reorx
+  #  remark42:
+  #    url: https://remark42.reorx.com
+  #    site: reorx.github.io
+  #  telegramWidget:
+  #    channel: reorx_share
+  #    accentColor: "9077e1"
+  #    limit: 20
+  #defaultCommentSystems:
+  #  remark42: true
+
+  socialIcons:
+    - name: github-simple
+      url: "https://github.com/reorx"
+    - name: twitter-simple
+      url: "https://twitter.com/novoreorx"
+    - name: telegram-simple
+      url: "https://t.me/reorx_share"
+    - name: rss-simple
+      url: "feed.xml"
+    - name: gmail
+      url: email
+
+  socialAccounts:
+    twitter:
+      username: novoreorx
+
+  homeInfoParams:
+    Title: "PaperModX"
+    Content: |
+      Welcome to demo of hugo's theme PaperModX.
+
+      - **PaperModX** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+
+      - PaperModX is based on theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
+
+      To get started, please head to the [Docs](docs).
+
+      To see examples of different contents, head to [examples tag](tags/example).
+
+permalinks:
+  notes: /:section/:year/:month/:slugorfilename
+
+# prefer feed.xml rather than index.xml
+outputFormats:
+  RSS:
+    mediatype: "application/rss"
+    baseName: "feed"
+
+menu:
+  main:
+    - name: Posts
+      url: /posts/
+      weight: 1
+    - name: Notes
+      url: /notes/
+      weight: 2
+    - name: Newsletter
+      url: /newsletter/
+      weight: 3
+    - name: Archives
+      url: /archives/
+      weight: 4
+
+languages:
+  en:
+    languageName: "English"
+    homeInfoParams: "use custom home_info.html"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: dracula
+    lineNos: false
+    noClasses: false
