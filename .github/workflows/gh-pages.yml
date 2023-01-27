@@ -15,6 +15,10 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
 
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v1
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -22,7 +26,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --buildFuture --minify --environment production
+        run: hugo --buildFuture --minify --environment production --baseURL ${{ steps.pages.outputs.base_url }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
