@@ -12,7 +12,7 @@ params:
     - cover.png
   favicon: favicon.ico
   #logo:
-  #  icon: images/forge-v2-compat.svg
+  #  icon: images/logo.svg
   DateFormat: "2006-01-02"
   useCustomAnalytics: true
   mainSections:
@@ -34,19 +34,6 @@ params:
   ShowCodeCopyButtons: true
   ShowPostNavLinks: true
   Email: hello@example.com
-
-  #commentSystems:
-  #  disqus:
-  #    shortname: reorx
-  #  remark42:
-  #    url: https://remark42.reorx.com
-  #    site: reorx.github.io
-  #  telegramWidget:
-  #    channel: reorx_share
-  #    accentColor: "9077e1"
-  #    limit: 20
-  #defaultCommentSystems:
-  #  remark42: true
 
   socialIcons:
     - name: github-simple
@@ -77,6 +64,19 @@ params:
 
       To see examples of different contents, head to [examples tag](tags/example).
 
+  #commentSystems:
+  #  disqus:
+  #    shortname: reorx
+  #  remark42:
+  #    url: https://remark42.reorx.com
+  #    site: reorx.github.io
+  #  telegramWidget:
+  #    channel: reorx_share
+  #    accentColor: "9077e1"
+  #    limit: 20
+  #defaultCommentSystems:
+  #  remark42: true
+
 permalinks:
   notes: /:section/:year/:month/:slugorfilename
 
@@ -94,9 +94,9 @@ menu:
     - name: Notes
       url: /notes/
       weight: 2
-    #- name: Newsletter
-    #  url: /newsletter/
-    #  weight: 3
+    - name: Newsletter
+      url: /newsletter/
+      weight: 3
     - name: Archives
       url: /archives/
       weight: 4
